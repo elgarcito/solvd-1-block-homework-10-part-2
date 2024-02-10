@@ -14,3 +14,5 @@
 
 12:10:52.066 [main] WARN  com.solvd.hardwarestore.products.ElectricProduct - You have not enough stock to sell this electric product, your stock is: 0 units
 
+21:28:04.837 [main] WARN  com.solvd.hardwarestore.products.ElectricProduct - You have not enough stock to sell this electric product, your stock is: 0 units
+

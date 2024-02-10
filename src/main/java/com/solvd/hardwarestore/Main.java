@@ -19,8 +19,8 @@ ProductSupplier: the one that sells the product.
 Client: the one that buys the product.
  */
 
-import com.solvd.hardwarestore.abstractclasses.Product;
-import com.solvd.hardwarestore.enumexamples.BankAccounts;
+import com.solvd.hardwarestore.abstract_classes.Product;
+import com.solvd.hardwarestore.enum_examples.BankAccounts;
 import com.solvd.hardwarestore.person.Employee;
 import com.solvd.hardwarestore.products.*;
 import org.apache.logging.log4j.LogManager;
@@ -49,7 +49,7 @@ public class Main {
             //Accesing a field of an electric product created using relection
             Class<ElectricProduct> electricProductClass =(Class<ElectricProduct>) Class.forName("com.solvd.hardwarestore.products.ElectricProduct");
             //Accesing it SuperClass via reflection
-            Class<Product> productClass =(Class<Product>) Class.forName("com.solvd.hardwarestore.abstractclasses.Product");
+            Class<Product> productClass =(Class<Product>) Class.forName("com.solvd.hardwarestore.abstract_classes.Product");
             Field voltageRateReflection= electricProductClass.getDeclaredField("voltageRate");
             Field productDescriptionReflection= productClass.getDeclaredField("productDescription");
             productDescriptionReflection.setAccessible(true);
@@ -88,7 +88,7 @@ public class Main {
 
 
             //Using reflexion to acces into an enum
-            Class<BankAccounts> bankAccountWithReflexion= (Class<BankAccounts>) Class.forName("com.solvd.hardwarestore.enumexamples.BankAccounts");
+            Class<BankAccounts> bankAccountWithReflexion= (Class<BankAccounts>) Class.forName("com.solvd.hardwarestore.enum_examples.BankAccounts");
             //Check if it is an enum
             LOGGER.info(bankAccountWithReflexion.isEnum());
             //Accesing the enum types with reflexion and put them into an array
